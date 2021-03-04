@@ -5,7 +5,7 @@ In diesem Kapitel habe ich folgendes gemacht:
   - Repository erstellt
   - SSH Key generiert und eingebunden \
     In der Git Konsole: \
-    ssh-keygen -t rsa -b 4096 -C "jonas.wiesendanger@edu.tbz.ch"
+    `ssh-keygen -t rsa -b 4096 -C "jonas.wiesendanger@edu.tbz.ch"`
   - Repository an lokalen Ort geklont
 - Git Client installiert und konfiguriert
 - VM auf VMware Workstation aufgesetzt und apache2 via synaptic installiert
