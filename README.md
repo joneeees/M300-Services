@@ -27,7 +27,7 @@ In diesem Kapitel habe ich folgendes gemacht:
 - Vagrant VM ubuntu/xenial64 installiert \
   In CMD \
   Folgenden Pfad erstellt und dort hin navigiert: \
-  ```mkdir C:\temp\Vagrant\Vagrant01``` \
+  ```mkdir C:\temp\Vagrant\Vagrant01``` 
   ```cd C:\temp\Vagrant\Vagrant01``` \
   ```vagrant init ubuntu/xenial64``` \
   ```vagrant up --provider virtualbox``` \
@@ -56,4 +56,4 @@ Infos zur Virtual Machine: \
     Network Interface: enp0s3 \
     IP Address: 10.0.2.15 \
     Installierte Software: Apache2 \
-    Zugriff auf Webapp: 127.0.0.1:8080 \
+    Zugriff auf Webapp: 127.0.0.1:187 \
