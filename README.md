@@ -37,7 +37,7 @@ In diesem Kapitael habe ich folgendes gemacht:
   `sudo apt-get upgrade -y` \
   `sudo apt-get install apache2 -y` \
 Infos zur Virtual Machine: \
-| Vagrant Box | Ubuntu/xenial64 |
-| Hostname: | ubuntu-xenial |
-| Network Interface: | enp0s3 |
-| IP Address: | 10.0.2.15 |
+Vagrant Box: Ubuntu/xenial64 \
+ Hostname: ubuntu-xenial \
+ Network Interface: enp0s3 \
+ IP Address: 10.0.2.15 \
