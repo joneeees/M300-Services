@@ -42,8 +42,8 @@ Infos zur Virtual Machine: \
 - Vagrant VM ubuntu/xenial64 mit Apache2 installiert \
   In CMD \
   Folgenden Pfad erstellt und dort hin navigiert: \
-  ```mkdir C:\temp\Vagrant\Apache``` \
-  ```cd C:\temp\Vagrant\Apache``` \
+  ```mkdir C:\temp\Vagrant\Apache2``` \
+  ```cd C:\temp\Vagrant\Apache2``` \
   Vagrant File im GUI erstellt \
   Der Code in [diesem](https://github.com/mc-b/M300/blob/master/vagrant/web/Vagrantfile) Vagrantfile in das lokale kopiert \
   Im Vagrantfile Port von "8080" auf "187" geändert \
