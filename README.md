@@ -23,7 +23,7 @@ In diesem Kapitel habe ich folgendes gemacht:
 Dabei bin ich folgender [Anleitung](https://github.com/mc-b/M300/tree/master/20-Infrastruktur) gefolgt. 
 
 ## Vagrant
-In diesem Kapitael habe ich folgendes gemacht: 
+In diesem Kapitel habe ich folgendes gemacht: 
 - Vagrant VM ubuntu/xenial64 installiert \
   In CMD \
   Folgenden Pfad erstellt und dort hin navigiert: \
@@ -31,13 +31,25 @@ In diesem Kapitael habe ich folgendes gemacht:
   `cd C:\temp\Vagrant\Vagrant01` \
   `vagrant init ubuntu/xenial64` \
   `vagrant up --provider virtualbox` \
-  `vagrant ssh` Dieser Command wurde in der Git Bash ausgeführt, da es im CMD und CMDer Public Key Probleme gab. 
-- VM aktualisiert und Apache installiert \
-  `sudo apt-get update` \
-  `sudo apt-get upgrade -y` \
-  `sudo apt-get install apache2 -y` \
+  `vagrant ssh` Dieser Command wurde in der Git Bash ausgeführt, da es im CMD und CMDer Public Key Probleme gab. \
 Infos zur Virtual Machine: \
-Vagrant Box: Ubuntu/xenial64 \
- Hostname: ubuntu-xenial \
- Network Interface: enp0s3 \
- IP Address: 10.0.2.15 \
+    Vagrant Box: Ubuntu/xenial64 \
+    Hostname: ubuntu-xenial \
+    Network Interface: enp0s3 \
+    IP Address: 10.0.2.15 \
+    Installierte Software: - \
+- Vagrant VM ubuntu/xenial64 mit Apache2 installiert \
+  In CMD \
+  Folgenden Pfad erstellt und dort hin navigiert: \
+  `mkdir C:\temp\Vagrant\Apache` \
+  `cd C:\temp\Vagrant\Apache` \
+  Vagrant File im GUI erstellt \
+  Der Code in [diesem](https://github.com/mc-b/M300/blob/master/vagrant/web/Vagrantfile) Vagrantfile in das lokale kopiert \
+  Wieder im CMD im Ordner "Apache" `vagrant up` \
+  `vgrant ssh` Dieser Command wurde in der Git Bash ausgeführt, da es im CMD und CMDer Public Key Probleme gab. \
+Infos zur Virtual Machine: \
+    Vagrant Box: Ubuntu/xenial64 \
+    Hostname: ubuntu-xenial \
+    Network Interface: enp0s3 \
+    IP Address: 10.0.2.15 \
+    Installierte Software: Apache2 \
