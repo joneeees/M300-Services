@@ -13,6 +13,11 @@ In diesem Kapitel habe ich folgendes gemacht:
 - Vagrant installiert
 - Visual Studio Code mit Github verbunden, Extensions installiert und als Mardown Editor ausgewählt \
 \
-Dabei bin ich folgender [Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung) gefolgt
+Dabei bin ich folgender [Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung) gefolgt.
 
 ## 20 - Infrastruktur
+In diesem Kapitel habe ich folgendes gemacht:
+- Theorie gelesen
+- Dokumentation im .md File angefangen \
+\
+Dabei bin ich folgender [Anleitung](https://github.com/mc-b/M300/tree/master/20-Infrastruktur) gefolgt. 
