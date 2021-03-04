@@ -27,7 +27,7 @@ In diesem Kapitel habe ich folgendes gemacht:
 - Vagrant VM ubuntu/xenial64 installiert \
   In CMD \
   Folgenden Pfad erstellt und dort hin navigiert: \
-  ```mkdir C:\temp\Vagrant\Vagrant01``` 
+  ```mkdir C:\temp\Vagrant\Vagrant01``` \
   ```cd C:\temp\Vagrant\Vagrant01``` \
   ```vagrant init ubuntu/xenial64``` \
   ```vagrant up --provider virtualbox``` \
