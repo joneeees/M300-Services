@@ -21,3 +21,18 @@ In diesem Kapitel habe ich folgendes gemacht:
 - Dokumentation im .md File angefangen \
 \
 Dabei bin ich folgender [Anleitung](https://github.com/mc-b/M300/tree/master/20-Infrastruktur) gefolgt. 
+
+## Vagrant
+In diesem Kapitael habe ich folgendes gemacht: 
+- Vagrant VM Ubuntu/xenial64 installiert \
+  In CMD \
+  Folgenden Pfad erstellt und dort hin navigiert: \
+  `mkdir C:\temp\Vagrant\Vagrant01` \
+  `cd C:\temp\Vagrant\Vagrant01` \
+  `vagrant init ubuntu/xenial64` \
+  `vagrant up --provider virtualbox` \
+  `vagrant ssh` Dieser Command wurde in der Git Bash ausgeführt, da es im CMD und CMDer Public Key Probleme gab. \
+- VM aktualisiert und Apache installiert \
+  `sudo apt-get update` \
+  `sudo apt-get upgrade -y` \
+  `sudo apt-get install apache2 -y` \  
