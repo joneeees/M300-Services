@@ -57,6 +57,8 @@ Infos zur Virtual Machine: \
     IP Address: 10.0.2.15 \
     Installierte Software: Apache2 \
     Zugriff auf Webapp: 127.0.0.1:187 \
+Netzwerkplan: \
+![Netzwerkplan](https://github.com/joneeees/M300-Services/blob/main/Images/Netzwerkplan.png)
 \
 ### Testing der VM:
 Zugriff auf Apache über Port 187: \
