@@ -33,7 +33,7 @@ In diesem Kapitel habe ich folgendes gemacht:
   ```vagrant up --provider virtualbox``` \
   `vagrant ssh` Dieser Command wurde in der Git Bash ausgeführt, da es im CMD und CMDer Public Key Probleme gab \
   \
-Infos zur Virtual Machine: \
+### Infos zur Virtual Machine:
     Vagrant Box: Ubuntu/xenial64 \
     Hostname: ubuntu-xenial \
     Network Interface: enp0s3 \
@@ -50,14 +50,14 @@ Infos zur Virtual Machine: \
   Wieder im CMD im Ordner "Apache" `vagrant up` \
   `vgrant ssh` Dieser Command wurde in der Git Bash ausgeführt, da es im CMD und CMDer Public Key Probleme gab \
   \
-Infos zur Virtual Machine: \
+### Infos zur Virtual Machine:
     Vagrant Box: Ubuntu/xenial64 \
     Hostname: ubuntu-xenial \
     Network Interface: enp0s3 \
     IP Address: 10.0.2.15 \
     Installierte Software: Apache2 \
     Zugriff auf Webapp: 127.0.0.1:187 \
-Netzwerkplan: \
+### Netzwerkplan:
 ![Netzwerkplan](https://github.com/joneeees/M300-Services/blob/main/Images/Netzwerkplan.png)
 \
 ### Testing der VM:
