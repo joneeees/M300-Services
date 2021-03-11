@@ -57,3 +57,14 @@ Infos zur Virtual Machine: \
     IP Address: 10.0.2.15 \
     Installierte Software: Apache2 \
     Zugriff auf Webapp: 127.0.0.1:187 \
+\
+### Testing der VM:
+Zugriff auf Apache über Port 187: \
+![Web Zugrif über Port 187](https://github.com/joneeees/M300-Services/blob/main/Images/Apache-Port-187.png) \
+\
+Änderung in Index File: \
+![Änderung im Index File](https://github.com/joneeees/M300-Services/blob/main/Images/Index-%C3%84nderungen.png) \
+\
+Port Forwarding:\
+![Port Forwarding](https://github.com/joneeees/M300-Services/blob/main/Images/Port-Forwarding.png)\
+\
