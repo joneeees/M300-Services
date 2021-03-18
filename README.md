@@ -5,7 +5,10 @@ In diesem Kapitel habe ich folgendes gemacht:
   - Repository erstellt
   - SSH Key generiert und eingebunden \
     In der Git Konsole: \
-    ```ssh-keygen -t rsa -b 4096 -C "jonas.wiesendanger@edu.tbz.ch"```
+    ```
+    ssh-keygen -t rsa -b 4096 -C "jonas.wiesendanger@edu.tbz.ch"
+    ```
+    \
   - Repository an lokalen Ort geklont
 - Git Client installiert und konfiguriert
 - VM auf VMware Workstation aufgesetzt und apache2 via synaptic installiert
@@ -27,10 +30,21 @@ In diesem Kapitel habe ich folgendes gemacht:
 - Vagrant VM ubuntu/xenial64 installiert \
   In CMD \
   Folgenden Pfad erstellt und dort hin navigiert: \
-  ```mkdir C:\temp\Vagrant\Vagrant01``` \
-  ```cd C:\temp\Vagrant\Vagrant01``` \
-  ```vagrant init ubuntu/xenial64``` \
-  ```vagrant up --provider virtualbox``` \
+  ```
+  mkdir C:\temp\Vagrant\Vagrant01
+  ``` 
+  \
+  ```
+  cd C:\temp\Vagrant\Vagrant01
+  ``` 
+  \
+  ```
+  vagrant init ubuntu/xenial64
+  ``` 
+  \
+  ```
+  vagrant up --provider virtualbox
+  ``` 
   `vagrant ssh` Dieser Command wurde in der Git Bash ausgeführt, da es im CMD und CMDer Public Key Probleme gab \
 
 ### Infos zur Virtual Machine:
@@ -42,8 +56,8 @@ In diesem Kapitel habe ich folgendes gemacht:
 - Vagrant VM ubuntu/xenial64 mit Apache2 installiert \
   In CMD \
   Folgenden Pfad erstellt und dort hin navigiert: \
-  ```mkdir C:\temp\Vagrant\Apache2``` \
-  ```cd C:\temp\Vagrant\Apache2``` \
+  ```mkdir C:\temp\Vagrant\Apache2``` 
+  ```cd C:\temp\Vagrant\Apache2``` 
   Vagrant File im GUI erstellt \
   Der Code in [diesem](https://github.com/mc-b/M300/blob/master/vagrant/web/Vagrantfile) Vagrantfile in das lokale kopiert \
   Im Vagrantfile Port von "8080" auf "187" geändert \
@@ -80,18 +94,18 @@ In diesem Kapitel habe ich folgendes gemacht:
 \
 
 ### Commands erklären:
-```sudo ufw --force enable``` \
+```sudo ufw --force enable``` 
 Dieser Command erzwingt das "enablen" von der ufw (Ubuntu Fire Wall). `--force` ist für das Erzwingen. \
-```sudo ufw allow 22``` \
+```sudo ufw allow 22``` 
 Dieser Command macht eine Firewallregel, welche den Port 22 (SSH) erlaubt. \
-```sudo ufw allow 2222``` \
+```sudo ufw allow 2222``` 
 Dieser Command macht eine Firewallregel, welche den Port 2222 (SSH) erlaubt. \
-```sudo systemctl start ssh``` \
+```sudo systemctl start ssh``` 
 Dieser Command startet den Dienst "ssh". \
-```sudo sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config``` \
+```sudo sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config``` 
 Dieser Command sucht im File "/etc/ssh/sshd_config" nach ".*PasswordAuthentication.*" und ersetzt dies durch "PasswordAuthentication yes". \
 - "/g" steht für global. Das heisst es ersetzt den Gesuchten Teil überall im genannten File und nicht nur an einem Ort \
-```sudo sed -i "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g" /etc/ssh/sshd_config``` \
+```sudo sed -i "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g" /etc/ssh/sshd_config``` 
 Dieser Command sucht im File "/etc/ssh/sshd_config" nach ".*ChallengeResponseAuthentication.*" und ersetzt dies durch "ChallengeResponseAuthentication yes". \
 - "/g" steht für global. Das heisst es ersetzt den Gesuchten Teil überall im genannten File und nicht nur an einem Ort \
 
