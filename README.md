@@ -101,27 +101,33 @@ In diesem Kapitel habe ich folgendes gemacht:
 ```
 sudo ufw --force enable
 ``` 
+\
 Dieser Command erzwingt das "enablen" von der ufw (Ubuntu Fire Wall). `--force` ist für das Erzwingen. \
 ```
 sudo ufw allow 22
 ``` 
+\
 Dieser Command macht eine Firewallregel, welche den Port 22 (SSH) erlaubt. \
 ```
 sudo ufw allow 2222
 ``` 
+\
 Dieser Command macht eine Firewallregel, welche den Port 2222 (SSH) erlaubt. \
 ```
 sudo systemctl start ssh
 ``` 
+\
 Dieser Command startet den Dienst "ssh". \
 ```
 sudo sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
 ``` 
+\
 Dieser Command sucht im File "/etc/ssh/sshd_config" nach ".*PasswordAuthentication.*" und ersetzt dies durch "PasswordAuthentication yes". \
 - "/g" steht für global. Das heisst es ersetzt den Gesuchten Teil überall im genannten File und nicht nur an einem Ort \
 ```
-udo sed -i "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g" /etc/ssh/sshd_config
+sudo sed -i "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g" /etc/ssh/sshd_config
 ``` 
+\
 Dieser Command sucht im File "/etc/ssh/sshd_config" nach ".*ChallengeResponseAuthentication.*" und ersetzt dies durch "ChallengeResponseAuthentication yes". \
 - "/g" steht für global. Das heisst es ersetzt den Gesuchten Teil überall im genannten File und nicht nur an einem Ort \
 
