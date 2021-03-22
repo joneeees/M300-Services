@@ -124,7 +124,31 @@ sudo sed -i "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthenticati
 \
 Dieser Command sucht im File "/etc/ssh/sshd_config" nach ".*ChallengeResponseAuthentication.*" und ersetzt dies durch "ChallengeResponseAuthentication yes". 
 - "/g" steht für global. Das heisst es ersetzt den Gesuchten Teil überall im genannten File und nicht nur an einem Ort 
-
+```
+sudo chown -c vagrant /var/mail
+``` 
+\
+Dieser Command gibt die Ownerrechte vom edm Verzeichis /var/mail an den User vagrant.
+```
+sudo chmod -R 700 /var/mail
+``` 
+\
+Dieser Command setzt die Rechte auf 700 --> User hat Read/Write/Execute. Group und Global hat keine Berechtigungen.
+```
+sudo apt-get -y install nginx
+``` 
+\
+Dieser Command installiert nginx.
+```
+sudo unlink /etc/nginx/sites-enabled/default
+``` 
+\
+Dieser Command deaktiviert den Virtual Host.
+```
+sudo touch /etc/nginx/sites-available/reverse-proxy.conf
+``` 
+\
+Dieser Command erstellt das File für Reverse-proxy.
 ### Überprüfung:
 Mit `vagrant up` habe ich die VM erstellt \
 ![vagrant up](https://github.com/joneeees/M300-Services/blob/main/Images/vagrant-up.png)\
