@@ -149,6 +149,18 @@ sudo touch /etc/nginx/sites-available/reverse-proxy.conf
 ``` 
 \
 Dieser Command erstellt das File für Reverse-proxy.
+```
+	cat <<%EOF% | sudo tee -a /etc/nginx/sites-available/reverse-proxy.conf
+	server {
+		listen 8080;
+		location / {
+			proxy_pass http://127.0.0.1;
+		}
+	}
+%EOF%
+``` 
+\
+Dieser Abschnitt fügt den Inhalt im File "/etc/nginx/sites-available/reverse-proxy.conf" hinzu. Der Inhalt sagt, dass der Reverse Proxy über Port 8080 für den Localhost (127.0.0.1) kommuniziert. 
 ### Überprüfung:
 Mit `vagrant up` habe ich die VM erstellt \
 ![vagrant up](https://github.com/joneeees/M300-Services/blob/main/Images/vagrant-up.png)\
