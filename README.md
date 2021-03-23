@@ -160,7 +160,27 @@ Dieser Command erstellt das File für Reverse-proxy.
 %EOF%
 ``` 
 \
-Dieser Abschnitt fügt den Inhalt im File "/etc/nginx/sites-available/reverse-proxy.conf" hinzu. Der Inhalt sagt, dass der Reverse Proxy über Port 8080 für den Localhost (127.0.0.1) kommuniziert. 
+Dieser Abschnitt fügt den Inhalt im File "/etc/nginx/sites-available/reverse-proxy.conf" hinzu. Der Inhalt sagt, dass der Reverse Proxy über Port 8080 für den Localhost (127.0.0.1) kommuniziert.
+``` 
+sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+``` 
+\
+Dieser Command erstellt einen Symlink von "/etc/nginx/sites-available/reverse-proxy.conf" nach "/etc/nginx/sites-enabled/reverse-proxy.conf".
+``` 
+sudo systemctl stop apache2
+``` 
+\
+Dieser Command stopt den Dienst "apache2".
+``` 
+sudo systemctl restart nginx
+``` 
+\
+Dieser Command startet den Dienst "nginx" neu. 
+``` 
+sudo reboot
+``` 
+\
+Dieser Command startet die VM neu.  
 ### Überprüfung:
 Mit `vagrant up` habe ich die VM erstellt \
 ![vagrant up](https://github.com/joneeees/M300-Services/blob/main/Images/vagrant-up.png)\
