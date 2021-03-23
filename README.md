@@ -174,8 +174,8 @@ Dieser Command stopt den Dienst "apache2".
 ``` 
 sudo systemctl restart nginx
 ``` 
-Dieser Command startet den Dienst "nginx" neu. 
 \
+Dieser Command startet den Dienst "nginx" neu. 
 ``` 
 sudo reboot
 ``` 
