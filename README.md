@@ -188,5 +188,11 @@ Mit `vagrant up` habe ich die VM erstellt \
 Mit `vagrant ssh` habe ich mich mit SSH auf die VM verbunden\
 ![vagrant ssh](https://github.com/joneeees/M300-Services/blob/main/Images/vagrant-ssh.png)\
 Nachdem ich mich verbindet habe, habe ich geprüft, ob die ufw läuft \
-Mit `systemctl status ufw` habe ich dies gemacht \
+Dies habe ich mit  `systemctl status ufw` gemacht \
 ![systemctl status ufw](https://github.com/joneeees/M300-Services/blob/main/Images/ufw-status.png)\
+Nun habe ich geprüft, ob ich mit dem User "vagrant" auf die Location zugriff habe und mit dem User "ubuntu" nicht \
+Dies habe ich mit  `cd /var/mail/` gemacht \
+![/var/mail/ Zugriffsberechtigungen mit User "vagrant" und "ubuntu"](https://github.com/joneeees/M300-Services/blob/main/Images/var-mail-permission.png)\
+Zum Schluss habe ich getestet, ob der Reverse-Proxy funktioniert \
+Dies habe ich mit `` gemacht \
+![Reverse-Proxy testing](https://github.com/joneeees/M300-Services/blob/main/Images/reverse-proxy.png)
