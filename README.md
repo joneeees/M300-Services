@@ -194,5 +194,5 @@ Nun habe ich geprüft, ob ich mit dem User "vagrant" auf die Location zugriff ha
 Dies habe ich mit  `cd /var/mail/` gemacht \
 ![/var/mail/ Zugriffsberechtigungen mit User "vagrant" und "ubuntu"](https://github.com/joneeees/M300-Services/blob/main/Images/var-mail-permission.png)\
 Zum Schluss habe ich getestet, ob der Reverse-Proxy funktioniert \
-Dies habe ich mit `` gemacht \
+Dies habe ich mit `sudo service nginx configtest` gemacht \
 ![Reverse-Proxy testing](https://github.com/joneeees/M300-Services/blob/main/Images/reverse-proxy.png)
