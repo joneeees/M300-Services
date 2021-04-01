@@ -23,4 +23,3 @@ Sobald der Container lauft: \
 docker exec -it [Name des Containers]] /bin/bash
 ```
 Bsp.: _docker exec -it brave\_meninsky /bin/bash_ \
-\
