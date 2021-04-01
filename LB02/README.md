@@ -4,5 +4,5 @@ Docker Image aus Web herunterladen:
 ```
 docker pull [Name des Images]
 ```
-Bsp.: docker pull ubuntu \
+Bsp.: _docker pull ubuntu_ \
 xy
