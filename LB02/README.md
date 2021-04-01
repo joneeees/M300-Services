@@ -21,6 +21,6 @@ Bsp.: _docker start f40e56f22f29_ \
 \
 Sobald der Container lauft: \
 ```
-docker exec -it [Name des Containers]] /bin/bash
+docker exec -it [Name des Containers] /bin/bash
 ```
 Bsp.: _docker exec -it brave\_meninsky /bin/bash_ \
