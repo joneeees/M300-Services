@@ -61,6 +61,7 @@ Mit folgendem Command habe ich das Imagen dann gebaut:
 docker build [VerzeichnisInDemSichDasDockerfileBefindet]
 ```
 Bsp.: _docker build C:\temp\Docker\Dockerfiles\Web_ \
+\
 Wichtig hier ist, dass man das Dockerfile selbst nicht im Pfad angeben muss. Nur der Ordner, in welchem sich das File befindet, muss angegeben werden. Das File muss aber zwingend "Dockerfile" heissen. 
 
 #### Container bauen
@@ -68,3 +69,27 @@ Anhand des oben erstellten Images habe ich dann einen Container gebaut. Dies hab
 ```
 docker run --rm -d -p 8080:80 -v /web:/var/www/html --name web aa6106ddd123
 ```
+
+#### index.html File
+Da das Image kein index.html File mitbringt, habe ich selbst eines erstellt. In diesem HTML File habe ich den Link zu diesem Repository angegeben. 
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>M300</title>
+</head>
+<body>
+<h1>LB02 GitHub Repository</h1>
+<a>Das LB02 GitHub Repository ist unter</a>
+<a href="https://github.com/joneeees/M300-Services/tree/main/LB02">folgendem Link</a>
+<a>erreichbar</a>
+</body>
+</html>
+```
+Dieses File habe ich dann mit folgendem Command auf den Container kopiert:
+```
+docker cp [/SpeicherortDerDatei/index.html] [Container Name]:[Destination Path im Container]
+```
+Bsp.: _docker cp C:\temp\Docker\Dockerfiles\Web\index.html web:/var/www/html/_ \
