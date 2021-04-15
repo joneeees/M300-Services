@@ -24,6 +24,11 @@ Auf Container zugreifen (per Shell):
 docker exec -it [Name des Containers] /bin/bash
 ```
 Bsp.: _docker exec -it brave\_meninsky /bin/bash_ 
+\
+Image Umbenennen: 
+```
+docker tag [ID des Images] [neuer Name des Images]
+```
 
 ### Netzwerkplan
 ![Netzwerkplan](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/Netzwerkplan.png)
@@ -110,3 +115,14 @@ WORKDIR /home/[NeuerUserName]
 _Der letzte Befehl ist aus sicherheitstechnischen Gründen nicht notwenid, da dieser nur die Direcotry, in welchem man am Anfang ist ändert._ \
 Im Screenshot sieht man nur, dass ich mit dem neuen User eingeloggt bin und ich keinen Befehl mit "sudo" ausführen konnte ohne Passwort. \
 ![Einloggen mit neuem User](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/newuser.png)
+
+#### Read Only
+Wenn man den Docker mit der Option read-only startet, können keine Änderungen am Dateisystem vorgenommen werden (auch mit sudo nicht):
+```
+docker run --read-only -d -t --name [NameDesContainer] [Image]
+```
+Im Bild sieht man, dass ich kein File erstellen konnte, da der Container auf "read-only" ist. \
+![Readonly](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/readonly.png)
+
+#### Dockerfiles
+Ein wichtiger Punkt mit welchem man sich und seine Netzwerkumgebung schützen kann ist, dass man seine DOckerfile's selber schreibt. Wenn man das macht und nicht irgendwelche Images aus dem Internet herunterladet, kann man sich sicher sein, dass diese nicht mit Malware oder sonst was verseucht sind.
