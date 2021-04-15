@@ -92,4 +92,21 @@ Dieses File habe ich dann mit folgendem Command auf den Container kopiert:
 ```
 docker cp [/SpeicherortDerDatei/index.html] [Container Name]:[Destination Path im Container]
 ```
-Bsp.: _docker cp C:\temp\Docker\Dockerfiles\Web\index.html web:/var/www/html/_ \
+Bsp.: _docker cp C:\temp\Docker\Dockerfiles\Web\index.html web:/var/www/html/_ 
+
+#### Testfälle
+Um die Funktionalität zu testen habe ich im Browser auf den Localhost zugegriffen. Dort sieht man dann das index.html File, welches ich geschrieben uf auf den Container kopiert habe. \
+![Testing des "web" Containers](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/web-test.png)
+
+## 35 - Sicherheit
+### Sicherheitsmassnahmen
+#### Nicht den root User als Standarduser verwenden
+Es ergibt Sinn, dass man sich nicht als root User einloggt, damit man kritische sudo-Befehle nicht ohne Passwort ausführen kann. Um das umzusetzen, muss man folgendes ins Dockerfile schreiben: 
+```
+RUN useradd -ms /bin/bash [NeuerUserName] \
+USER [NeuerUserName] \
+WORKDIR /home/[NeuerUserName]
+```
+_Der letzte Befehl ist aus sicherheitstechnischen Gründen nicht notwenid, da dieser nur die Direcotry, in welchem man am Anfang ist ändert._ \
+Im Screenshot sieht man nur, dass ich mit dem neuen User eingeloggt bin und ich keinen Befehl mit "sudo" ausführen konnte ohne Passwort. \
+![Einloggen mit neuem User](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/newuser.png)
