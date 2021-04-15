@@ -126,3 +126,16 @@ Im Bild sieht man, dass ich kein File erstellen konnte, da der Container auf "re
 
 #### Dockerfiles
 Ein wichtiger Punkt mit welchem man sich und seine Netzwerkumgebung schützen kann ist, dass man seine DOckerfile's selber schreibt. Wenn man das macht und nicht irgendwelche Images aus dem Internet herunterladet, kann man sich sicher sein, dass diese nicht mit Malware oder sonst was verseucht sind.
+
+### Monitoring
+#### Cadvisor
+Cadvisor ist ein Überwachungstool von Google. \
+Mit folgendem Befehl kann man einen Container erstellen, in welchem diese Webapplikation läuft: 
+```
+docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8010:8080 google/cadvisor:latest
+```
+_Wichtig ist, dass man schaut, dass der Port, welcher man verwendet, noch frei ist. Deshalb habe ich hier den Port "8010" genommen._ \
+
+##### Überprüfung der Webapp
+Über 127.0.0.1:8010 konnte ich auf Cadvisor zugreifen \
+![Cadvisor Webapplikation](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/cadvisor.png)
