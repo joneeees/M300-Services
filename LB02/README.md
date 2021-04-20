@@ -233,12 +233,12 @@ Wichtig: bei "app" steht bei allen das Gleiche. Dies muss so sein, da der Loadba
 Den Service ausführen kann man dann wider mit ´kubectl apply -f [Name des Files].yaml´. \
 Mit ´kuvectl get services´ kann man dann den Service anzeigen lassen. \
 Der rot umrandete Service, ist der erstellt Loadbalancer (der Screenshot ist nicht von meiner Umgebung): \
-![Kubernetes Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/services.png)
+![Kubernetes Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/services.png) \
 
 #### Funktionalität des Loadbalancers
 Mit dem Befehl ´kubectl describe services [Service Name]´ sieht man einige Informationen über einen Service. \
 Wenn man dies eingibt sollte folgender Output entstehen: \
-![Describe Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/loadbalancing.png)
+![Describe Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/loadbalancing.png) \
 Beim Punkt "Endpoints" werden alle IP Adressen der Container angegeben, welche im Loadbalancer enthalten sind. Im obigen Beispiel sind es 3 Replicas, sprich 3 Container. 
 Wenn man im .yaml File diese Zahl ändert, sieht man, dass dies auch so angezeigt wird:
 ![Describe Services 2](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/loadbalancing2.png)
