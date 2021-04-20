@@ -155,7 +155,7 @@ docker push [Docker Hub Username]/[GewünschterName]:[Tag]
 ```
 Bsp.: _docker push hallo987123hallo/test-cloud-image:test_ \
 \
-![Docker Push](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/image-push.PNG) \
+![Docker Push](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/image-push.PNG)
 
 Im Docker Hub würde das dann so aussehen: \
 ![Docker Hub](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/dockerhub.png)
