@@ -169,4 +169,76 @@ _docker pull hallo987123hallo/test-cloud-image:test_ \
 ![Docker Pull](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/image-pull.PNG)
 
 ## 40 - Kubernetes
-### 
+### Deployment erstellen
+Als erstes muss man ein deployment File erstellen, welches folgenden Inhalt hat:
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: m300-kub
+  labels:
+    app: m300-kub
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: m300-kub
+  template:
+    metadata:
+      labels:
+        app: m300-kub
+    spec:
+      containers:
+      - name: m300-kub
+        image: kub
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+```
+_Ich habe mein File "kub.yaml" gennant_ \
+\
+Nun muss man das File "applyen". So werden die im File definierten Container erstellt. Dazu gibt man folgenden Befehl ein:
+```
+kubectl apply -f [filename].yaml
+```
+_kubectl apply -f kub.yaml_ \
+\
+Mit ´kubectl get pods´ kann man nun all seine Pods anzeigen lassen. Dies könnte so aussehen: \
+![kubectl apply](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/kubectl-apply.png)
+
+### Service
+In diesem Block wollen wir mehrere Apache Server als Loadbalancer laufen lassen. \
+Dazu erstellt man ein .yaml File, welches als Service ein Loadbalancer ist:
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: m300-loadbalancer
+  annotations:
+    service.beta.kubernetes.io/linode-loadbalancer-throttle: "4"
+  labels:
+    app: m300-loadbalancer
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: 300-kub
+  sessionAffinity: None
+```
+Wichtig: bei "app" steht bei allen das Gleiche. Dies muss so sein, da der Loadbalancer dann alle Container verwendet, welche bei "app" den Gleichen Wert haben. \
+Den Service ausführen kann man dann wider mit ´kubectl apply -f [Name des Files].yaml´. \
+Mit ´kuvectl get services´ kann man dann den Service anzeigen lassen. \
+Der rot umrandete Service, ist der erstellt Loadbalancer (der Screenshot ist nicht von meiner Umgebung): \
+![Kubernetes Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/services.png)
+
+#### Funktionalität des Loadbalancers
+Mit dem Befehl ´kubectl describe services [Service Name]´ sieht man einige Informationen über einen Service. \
+Wenn man dies eingibt sollte folgender Output entstehen: \
+![Describe Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/loadbalancing.png)
+Beim Punkt "Endpoints" werden alle IP Adressen der Container angegeben, welche im Loadbalancer enthalten sind. Im obigen Beispiel sind es 3 Replicas, sprich 3 Container. 
+Wenn man im .yaml File diese Zahl ändert, sieht man, dass dies auch so angezeigt wird:
+![Describe Services 2](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/loadbalancing2.png)
