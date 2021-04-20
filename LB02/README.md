@@ -242,3 +242,10 @@ Wenn man dies eingibt sollte folgender Output entstehen: \
 Beim Punkt "Endpoints" werden alle IP Adressen der Container angegeben, welche im Loadbalancer enthalten sind. Im obigen Beispiel sind es 3 Replicas, sprich 3 Container. 
 Wenn man im .yaml File diese Zahl ändert, sieht man, dass dies auch so angezeigt wird:
 ![Describe Services 2](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/loadbalancing2.png)
+
+### Notes
+Da ich auf dem Laptop meinen Benutzer nicht in die Local Admin Group tun darf, kann ich den VPN Client nicht verwenden und daher nicht auf die Serverumgebung zugreifen. Deshalb wollte ich den Kubernetes-Block auf der Ubuntu VM machen. Dort gab es aber folgenden Fehler:
+´´´
+The connection to the server <host>:6443 was refused - did you specify the right host or port?
+´´´
+Aus diesem Grund habe ich das Ganze mit Simon Zeller abgearbeitet aber für mich (mit seinen Screenshots) dokumentiert. 
