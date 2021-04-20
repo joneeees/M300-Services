@@ -155,7 +155,7 @@ docker push [Docker Hub Username]/[GewünschterName]:[Tag]
 ```
 Bsp.: _docker push hallo987123hallo/test-cloud-image:test_ \
 \
-![Docker Push](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/image-push.PNG)
+![Docker Push](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/image-push.PNG) \
 
 Im Docker Hub würde das dann so aussehen: \
 ![Docker Hub](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/dockerhub.png)
@@ -233,7 +233,7 @@ Wichtig: bei "app" steht bei allen das Gleiche. Dies muss so sein, da der Loadba
 Den Service ausführen kann man dann wider mit ´kubectl apply -f [Name des Files].yaml´. \
 Mit ´kuvectl get services´ kann man dann den Service anzeigen lassen. \
 Der rot umrandete Service, ist der erstellt Loadbalancer (der Screenshot ist nicht von meiner Umgebung): \
-![Kubernetes Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/services.png) \
+![Kubernetes Services](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/services.png)
 
 #### Funktionalität des Loadbalancers
 Mit dem Befehl ´kubectl describe services [Service Name]´ sieht man einige Informationen über einen Service. \
