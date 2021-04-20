@@ -139,3 +139,34 @@ _Wichtig ist, dass man schaut, dass der Port, welcher man verwendet, noch frei i
 ##### Überprüfung der Webapp
 Über 127.0.0.1:8010 konnte ich auf Cadvisor zugreifen \
 ![Cadvisor Webapplikation](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/cadvisor.png)
+
+## Docker Hub
+### Image bereitstellen
+Zuerst muss ein Container erstellt werden, mit dem Image, welches man auf Docker pushen will.\
+Danach führt man im CMD folgenden Command aus:
+```
+docker commit [Container ID des oben erstellten Containers] [Dockerhub Username]/[Gewünschter Name]:[Tag]
+```
+Bsp.: _docker commit 272b189d3bb6 hallo987123hallo/test-cloud-image:test_ \
+\
+Danach muss man das mit folgendem Befehl auf Docker Hub pushen:
+```
+docker push [Docker Hub Username]/[GewünschterName]:[Tag]
+```
+Bsp.: _docker push hallo987123hallo/test-cloud-image:test_ \
+\
+![Docker Push](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/image-push.PNG)
+
+Im Docker Hub würde das dann so aussehen: \
+![Docker Hub](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/dockerhub.png)
+
+### Image pullen
+Das Image kann man nun normal wie jedes andere Image herunterladen. Dazu muss man folgenden Befehl eingeben: 
+```
+docker pull [Docker Hub Username]/[GewünschterName]:[Tag]
+```
+_docker pull hallo987123hallo/test-cloud-image:test_ \
+![Docker Pull](https://github.com/joneeees/M300-Services/blob/main/LB02/Images/image-pull.PNG)
+
+## 40 - Kubernetes
+### 
